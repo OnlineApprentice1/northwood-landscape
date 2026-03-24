@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Fraunces, Figtree } from "next/font/google";
 import { siteConfig } from "@/config/site";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import SpotlightCursor from "@/components/SpotlightCursor";
 import "./globals.css";
 
 const heading = Fraunces({
@@ -64,7 +67,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col antialiased">{children}</body>
+      <body className="min-h-screen flex flex-col antialiased">
+        <SpotlightCursor />
+        <Header />
+        <main className="flex-1 pt-16">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
