@@ -1,26 +1,44 @@
 @import "tailwindcss";
+@import "../styles/colour-tokens.css";
+@import "../styles/typography.css";
+@import "../styles/profile.css";
+@import "../styles/archetype.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@plugin "daisyui" {
+  themes: northwood --default
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--clr-primary);
+  --color-accent: var(--clr-accent);
+  --color-base-100: var(--clr-surface-1);
+  --color-base-200: var(--clr-surface-2);
+  --color-base-300: var(--clr-surface-3);
+  --color-base-content: var(--clr-text-primary);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* DaisyUI theme definition */
+@utility northwood {
+  color-scheme: dark;
+  --p: var(--clr-primary);
+  --pf: var(--clr-primary-light);
+  --pc: var(--clr-text-primary);
+  --a: var(--clr-accent);
+  --af: var(--clr-accent-muted);
+  --ac: var(--clr-surface-1);
+  --b1: var(--clr-surface-1);
+  --b2: var(--clr-surface-2);
+  --b3: var(--clr-surface-3);
+  --bc: var(--clr-text-primary);
+  --n: var(--clr-surface-2);
+  --nf: var(--clr-surface-3);
+  --nc: var(--clr-text-primary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--clr-surface-1);
+  color: var(--clr-text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
 }
