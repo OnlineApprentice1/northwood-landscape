@@ -76,7 +76,7 @@ export default function HeroSection() {
         <motion.div
           className="blob-shape pointer-events-none absolute -right-16 -top-20 h-96 w-96 md:right-[8%] md:top-[5%]"
           style={{
-            background: "oklch(35% 0.14 145 / 0.20)",
+            background: "oklch(45% 0.14 145 / 0.20)",
             animation: "blob-drift-1 20s ease-in-out infinite",
             y: blob1Y,
           }}
@@ -98,7 +98,7 @@ export default function HeroSection() {
         <motion.div
           className="blob-shape pointer-events-none absolute bottom-[15%] right-[15%] hidden h-48 w-48 sm:block"
           style={{
-            background: "oklch(35% 0.10 145 / 0.15)",
+            background: "oklch(45% 0.10 145 / 0.15)",
             animation: "blob-drift-3 22s ease-in-out infinite",
             y: blob3Y,
           }}

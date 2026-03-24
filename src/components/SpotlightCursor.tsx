@@ -41,7 +41,7 @@ export default function SpotlightCursor() {
           left: springX,
           top: springY,
           background:
-            "radial-gradient(circle, oklch(35% 0.14 145 / 0.15) 0%, oklch(65% 0.20 148 / 0.08) 40%, transparent 70%)",
+            "radial-gradient(circle, oklch(45% 0.14 145 / 0.15) 0%, oklch(65% 0.20 148 / 0.08) 40%, transparent 70%)",
         }}
       />
     </motion.div>
